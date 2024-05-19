@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 function DonorLogin() {
   return (
     <div className='d-flex justify-content-center align-items-center vh-100' style={{ backgroundColor: '#FF6347' }}>
