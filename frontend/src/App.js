@@ -1,12 +1,12 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Authentication/Home";
 import AdminLogin from "./Authentication/AdminLogin";
 import DonorLogin from "./Authentication/DonorLogin";
 import PatientLogin from "./Authentication/PatientLogin";
-//import PatientSignup from './Authentication/PatientSignup';
-//import DonorSignup from './Authentication/DonorSignup';
+import PatientSignup from './Authentication/PatientSignup';
+import DonorSignup from './Authentication/DonorSignup';
 import "./App.css";
 const Layout = () => (
   <BrowserRouter>
@@ -33,23 +33,13 @@ const Layout = () => (
         <Route path="/admin" Component={AdminLogin} />
         <Route path="/donor" Component={DonorLogin} />
         <Route path="/patient" Component={PatientLogin} />
+        <Route path="/DonorSignup" Component={DonorSignup} />
+        <Route path="/PatientSignup" Component={PatientSignup} />
       </Routes>
     </div>
   </BrowserRouter>
 );
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<AdminLogin />} />
-//         <Route path="/donor" element={<DonorLogin />} />
-//         <Route path="/patient" element={<PatientLogin />} />
-//         <Route path="/PatientSignup" element={<PatientSignup />} />
-//         <Route path="/DonorSignup" element={<DonorSignup />} />
-
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-render(<Layout />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<Layout />);
 export default Layout;

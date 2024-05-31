@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function DonorLogin() {
+function DonorSignup() {
   return (
     <div className='d-flex justify-content-center align-items-center vh-100' style={{ backgroundColor: '#FF6347' }}>
       <div className='p-4 rounded w-25' style={{ backgroundColor: '#f0f0f0', color: '#333' }}>
@@ -36,11 +36,11 @@ function DonorLogin() {
           </div>
           <button type="submit" className='btn btn-success w-100 mb-3'>Sign Up</button>
           <p className='text-center'>You agree to our terms and conditions</p>
-          <Link to='/' type="submit" className='btn btn-success w-100 mb-3 text-decoration-none'>Login</Link>
+          <Link to='/donor' type="submit" className='btn btn-success w-100 mb-3 text-decoration-none'>go to LogIn</Link>
         </form>
       </div>
     </div>
   );
 }
 
-export default DonorLogin;
+export default DonorSignup;
