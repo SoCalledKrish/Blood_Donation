@@ -4,6 +4,7 @@ import './Home.css';
 const Home = () => (
   <div className="home-container">
     <h2>Home</h2>
+    
     <section>
       <h3>Why Donate Blood?</h3>
       <p>
@@ -21,6 +22,15 @@ const Home = () => (
         </li>
         <li>
           <strong>Community Solidarity:</strong> Donating blood fosters a sense of community and mutual support, showing that we care for one another.
+        </li>
+        <li>
+          <strong>Health Benefits for Donors:</strong> Regular blood donation can reduce harmful iron stores, lower cancer risk, and improve cardiovascular health.
+        </li>
+        <li>
+          <strong>Free Health Check-up:</strong> Every blood donation includes a basic health screening, which can help identify potential health issues early.
+        </li>
+        <li>
+          <strong>Sense of Accomplishment:</strong> Knowing that you have contributed to saving lives can provide a profound sense of personal satisfaction and accomplishment.
         </li>
       </ul>
     </section>
@@ -46,9 +56,22 @@ const Home = () => (
         <li>
           <strong>Improve Efficiency:</strong> Streamlining the process from donation to transfusion minimizes delays and optimizes resource utilization.
         </li>
+        <li>
+          <strong>Data-Driven Insights:</strong> The system can provide valuable data analytics, helping to predict trends and improve donation campaigns.
+        </li>
+        <li>
+          <strong>Facilitate Research:</strong> A well-maintained database can support medical research and studies related to blood and transfusion medicine.
+        </li>
+        <li>
+          <strong>Legal and Regulatory Compliance:</strong> Ensures compliance with health regulations and standards, maintaining trust and transparency.
+        </li>
+        <li>
+          <strong>Global Connectivity:</strong> Can integrate with national and international databases, improving collaboration and resource sharing across borders.
+        </li>
       </ul>
     </section>
   </div>
+
 );
 
 export default Home;
