@@ -1,0 +1,1 @@
+//this isl like app.js nav bar but for admin area
