@@ -8,7 +8,7 @@ import PatientLogin from "./Authentication/PatientLogin";
 import PatientSignup from './Authentication/PatientSignup';
 import DonorSignup from './Authentication/DonorSignup';
 import "./App.css";
-const Layout = () => (
+const Mainnavbar = () => (
   <BrowserRouter>
     <div>
       <nav>
@@ -41,5 +41,5 @@ const Layout = () => (
 );
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<Layout />);
-export default Layout;
+root.render(<Mainnavbar />);
+export default Mainnavbar;
