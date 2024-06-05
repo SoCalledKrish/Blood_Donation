@@ -1,7 +1,7 @@
 function AdminLoginValidation(values) {
     let errors = {};
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+    const password_pattern =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
 
     // Allowed emails with their respective passwords
     const allowed_credentials = {
