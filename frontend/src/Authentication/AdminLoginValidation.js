@@ -14,7 +14,7 @@ function AdminLoginValidation(values) {
     } else if (!email_pattern.test(values.email)) {
         errors.email = "Invalid email format";
     } else if (!allowed_credentials[values.email]) {
-        errors.email = "Email not authorized";
+        errors.email = " ";
     }
 
     if (values.password === "") {
@@ -22,7 +22,7 @@ function AdminLoginValidation(values) {
     } else if (!password_pattern.test(values.password)) {
         errors.password = "Password did not match requirements";
     } else if (allowed_credentials[values.email] && allowed_credentials[values.email] !== values.password) {
-        errors.password = "Incorrect password";
+        errors.password = " ";
     }
 
     return errors;
