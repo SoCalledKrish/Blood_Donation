@@ -1,0 +1,11 @@
+Example CSS for admin layout
+.admin-layout {
+    display: flex;
+  }
+  
+  .admin-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjust if needed based on your sidebar width */
+  }
+  

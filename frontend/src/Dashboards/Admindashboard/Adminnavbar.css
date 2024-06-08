@@ -1,0 +1,38 @@
+/* src/Dashboards/Admindashboard/Adminnavbar.css */
+
+.sidebar {
+    height: 100vh; /* Full height */
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Fixed Sidebar */
+    top: 3rem;
+    left: 0;
+    background-color: #333; /* Background color */
+    padding-top: 20px; /* Top padding */
+  }
+  
+  .sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 8px 16px; /* Padding inside the sidebar */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    display: block; /* Make the link fill the list item */
+    padding: 10px 15px; /* Padding for the links */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #575757; /* Hover background */
+  }
+  
+  .sidebar ul li a.active {
+    background-color: #04AA6D; /* Active link color */
+  }
+  
