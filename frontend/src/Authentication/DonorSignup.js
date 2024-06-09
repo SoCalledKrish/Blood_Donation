@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import DonorSignUpValidation from './DonorSignupValidation';
+import DonorSignUpValidation from './DonorSignUpValidation';
 
 function DonorSignup() {
     const navigate = useNavigate(); // Hook for programmatic navigation

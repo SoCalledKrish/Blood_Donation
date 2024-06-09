@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AdminLoginValidation from './AdminLoginValidation';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
 function AdminLogin() {
     const [values, setValues] = useState({
@@ -8,6 +9,7 @@ function AdminLogin() {
     });
 
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();  // Initialize useNavigate
 
     const handleInput = (event) => {
         setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
@@ -21,7 +23,8 @@ function AdminLogin() {
         // Prevent form submission if there are errors
         if (Object.keys(validationErrors).length === 0) {
             console.log("Form submitted successfully");
-            // Add logic for successful form submission
+            // Redirect to the admin dashboard on successful login
+            navigate('/Admindashboard');  // Use navigate to redirect
         }
     };
 
