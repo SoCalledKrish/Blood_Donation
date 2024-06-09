@@ -1,7 +1,7 @@
 function AdminLoginValidation(values) {
     let errors = {};
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+    const password_pattern =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
 
     // Allowed emails with their respective passwords
     const allowed_credentials = {
@@ -14,7 +14,7 @@ function AdminLoginValidation(values) {
     } else if (!email_pattern.test(values.email)) {
         errors.email = "Invalid email format";
     } else if (!allowed_credentials[values.email]) {
-        errors.email = " ";
+        errors.email = "Email not authorized";
     }
 
     if (values.password === "") {
@@ -22,7 +22,7 @@ function AdminLoginValidation(values) {
     } else if (!password_pattern.test(values.password)) {
         errors.password = "Password did not match requirements";
     } else if (allowed_credentials[values.email] && allowed_credentials[values.email] !== values.password) {
-        errors.password = " ";
+        errors.password = "Incorrect password";
     }
 
     return errors;
