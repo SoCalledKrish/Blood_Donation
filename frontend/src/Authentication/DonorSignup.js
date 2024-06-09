@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import DonorSignUpValidation from './DonorSignupValidation'; 
+import DonorSignUpValidation from './DonorSignupValidation';
 
 function DonorSignup() {
+    const navigate = useNavigate(); // Hook for programmatic navigation
     const [values, setValues] = useState({
         Username: '',
         age: '',
@@ -29,8 +30,11 @@ function DonorSignup() {
 
         if (Object.keys(validationErrors).every((key) => validationErrors[key] === "")) {
             try {
-                await axios.post('http://localhost:5000/api/donors', values);
+                await axios.post('http://localhost:3000/api/donors', values);
                 setSubmitted(true);
+
+                // Redirect to the login page after successful signup
+                navigate('/donor');
             } catch (error) {
                 console.error("Error submitting form", error);
             }
