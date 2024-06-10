@@ -5,8 +5,8 @@ function AdminLoginValidation(values) {
 
     // Allowed emails with their respective passwords
     const allowed_credentials = {
-        "admin1@example.com": "Admin1Password",
-        "admin2@example.com": "Admin2Password"
+        "admin1@example.com": "Admin1Password!",
+        "admin2@example.com": "Admin2Password!"
     };
 
     if (values.email === "") {
